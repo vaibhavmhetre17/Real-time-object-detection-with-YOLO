@@ -68,3 +68,35 @@ We analyzed different YOLOv8 pre-trained models based on size, speed, accuracy, 
 
 ### Selection Justification
 For this project, the focus is **real-time object detection** with limited hardware resources (CPU or low-end GPU). **YOLOv8-n** was selected because it provides **fast inference, low memory usage, and acceptable accuracy**, which aligns perfectly with the project’s speed and efficiency requirements.
+
+
+## Baseline Training
+
+To establish a baseline for future experiments, we trained **YOLOv8n** on our dataset for a small number of epochs. This helps track performance improvements over time.
+
+### Training Details
+
+- **Model:** YOLOv8n  
+- **Epochs:** 10  
+- **Batch size:** 16  
+- **Image size:** 640  
+- **Experiment name:** yolov8_baseline5  
+- **Optimizer:** AdamW (auto)  
+- **Training dataset:** 135 images (train), 55 images (validation)  
+
+### Validation Results (Last Epoch)
+
+| Metric       | Value      |
+|--------------|------------|
+| mAP@0.5      | 0.00723    |
+| mAP@0.5-0.95 | 0.0057     |
+| Box loss     | 1.192      |
+| Cls loss     | 4.581      |
+| DFL loss     | 1.241      |
+
+### Notes
+
+- Training completed successfully for 10 epochs.  
+- Baseline performance is low due to the small dataset and CPU training.  
+- Results are saved in `runs/detect/yolov8_baseline5`.  
+- This baseline will be used for comparison with future experiments using more epochs, larger models, or GPU acceleration.
