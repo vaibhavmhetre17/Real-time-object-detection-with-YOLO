@@ -44,3 +44,27 @@ We decided to use **YOLOv8** because:
 | roboflow           | Dataset import (optional)                         |
 | psutil             | Monitor CPU/GPU usage (optional)                  |
 
+
+
+## Research & Select YOLOv8 Variant
+
+We analyzed different YOLOv8 pre-trained models based on size, speed, accuracy, and hardware requirements:
+
+### YOLOv8-n (Nano)
+- **Size & Speed:** Extremely lightweight with the fewest parameters. Offers the fastest inference and training speed.  
+- **Hardware Efficiency:** Can run efficiently on CPUs or low-end GPUs, making it suitable for edge devices or real-time applications.  
+- **Accuracy:** Slightly lower than larger models but sufficient for many practical use-cases.  
+- **Use-case:** Best when speed and low resource usage are more critical than maximum accuracy.
+
+### YOLOv8-s (Small)
+- Slightly larger than Nano, with better accuracy.  
+- Moderate inference speed, suitable for standard GPUs.  
+- Good balance between speed and accuracy for projects with mid-range hardware.
+
+### YOLOv8-m (Medium), YOLOv8-l (Large), YOLOv8-x (Extra Large)
+- Very high accuracy.  
+- Requires powerful GPUs for training and inference.  
+- Slower and heavier, not ideal for real-time or low-resource environments.
+
+### Selection Justification
+For this project, the focus is **real-time object detection** with limited hardware resources (CPU or low-end GPU). **YOLOv8-n** was selected because it provides **fast inference, low memory usage, and acceptable accuracy**, which aligns perfectly with the project’s speed and efficiency requirements.
