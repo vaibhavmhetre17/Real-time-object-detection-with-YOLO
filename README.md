@@ -108,3 +108,38 @@ To establish a baseline for future experiments, we trained **YOLOv8n** on our da
 | Recall       | 0.60 |
 | mAP@0.5      | 0.58 |
 | mAP@0.5-0.95 | 0.36 |
+
+### Hyperparameter Tuning for YOLOv8
+
+This task focuses on improving the performance of YOLOv8 through hyperparameter optimization.
+We used Weights & Biases (W&B) Sweeps to test different parameter combinations and compare them with a baseline model.
+
+### Features
+
+- Train YOLOv8 baseline with default parameters
+- Define and run hyperparameter sweeps using W&B
+- Automatically explore learning rate, batch size, image size, and epochs
+- Compare baseline vs tuned performance
+- Save all results in runs/ and W&B dashboard
+
+### Why Hyperparameter Tuning?
+
+- Default YOLOv8 settings are not always optimal
+- Parameters like learning rate and batch size can heavily impact accuracy and loss
+- Manual tuning is time-consuming
+- W&B Sweeps automate the process and provide systematic comparisons
+
+### Sweep Training
+  Pperformed automated sweeps  
+  Parameters explored:
+- **Learning rate:** 0.001 – 0.01
+- **Batch size:** [16, 32, 64]
+- **Image size:** [416, 512, 640]
+- **Epochs:** 50
+
+### Notes
+
+- W&B Sweeps automated the hyperparameter search efficiently.
+- Tuned configuration improved performance compared to the baseline.
+- Results are reproducible and stored both locally and in W&B.
+
