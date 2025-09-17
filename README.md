@@ -100,3 +100,11 @@ To establish a baseline for future experiments, we trained **YOLOv8n** on our da
 - Baseline performance is low due to the small dataset and CPU training.  
 - Results are saved in `runs/detect/yolov8_baseline5`.  
 - This baseline will be used for comparison with future experiments using more epochs, larger models, or GPU acceleration.
+
+### Validation Results (Best Weights)
+| Metric       | Value|
+| -------------|------|
+| Precision    | 0.56 |
+| Recall       | 0.60 |
+| mAP@0.5      | 0.58 |
+| mAP@0.5-0.95 | 0.36 |
