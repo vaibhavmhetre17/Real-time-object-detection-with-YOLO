@@ -33,6 +33,7 @@ try:
         "final/mAP50": results.results_dict["metrics/mAP50(B)"],
         "final/mAP50-95": results.results_dict["metrics/mAP50-95(B)"]
     })
-    print("✅ Final metrics logged to W&B")
+    print("Final metrics logged to W&B")
 except Exception as e:
-    print(f"⚠ Could not log final results: {e}")
+    print(f"Could not log final results: {e}")
+
