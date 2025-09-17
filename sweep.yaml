@@ -1,0 +1,13 @@
+method: bayes   # options: grid, random, bayes
+metric:
+  name: metrics/mAP50
+  goal: maximize
+parameters:
+  lr0:          # learning rate
+    distribution: uniform
+    min: 0.001
+    max: 0.01
+  batch:        # batch size
+    values: [16, 32, 64]
+  imgsz:        # image size
+    values: [416, 512, 640]
