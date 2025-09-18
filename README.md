@@ -143,7 +143,7 @@ We used Weights & Biases (W&B) Sweeps to test different parameter combinations a
 - Tuned configuration improved performance compared to the baseline.
 - Results are reproducible and stored both locally and in W&B.
 
-## 📊 Report Final Metrics  
+## Report Final Metrics  
 
 This task evaluates the trained YOLOv8 model on the **test dataset** and documents final metrics for reporting and future reference.  
 
