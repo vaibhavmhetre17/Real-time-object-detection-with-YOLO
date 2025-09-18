@@ -151,11 +151,11 @@ This task evaluates the trained YOLOv8 model on the **test dataset** and documen
 1. Used trained weights:  /content/Real-time-object-detection-with-YOLO/runs/detect/yolov8_exp1/weights/best.pt
 2. Ran validation on the test split and stored results in:  /content/Real-time-object-detection-with-YOLO/runs/detect/train/final_metrics.json
 3. Metrics collected:  
-- mAP@0.5  
-- mAP@0.5:0.95  
-- Precision  
-- Recall  
-- F1-Score  
+      - mAP@0.5  
+      - mAP@0.5:0.95  
+      - Precision  
+      - Recall  
+      - F1-Score  
 
 ### Final Evaluation Metrics  
 
