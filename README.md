@@ -143,3 +143,40 @@ We used Weights & Biases (W&B) Sweeps to test different parameter combinations a
 - Tuned configuration improved performance compared to the baseline.
 - Results are reproducible and stored both locally and in W&B.
 
+## 📊 Report Final Metrics  
+
+This task evaluates the trained YOLOv8 model on the **test dataset** and documents final metrics for reporting and future reference.  
+
+### Implementation Steps  
+1. Used trained weights:  /content/Real-time-object-detection-with-YOLO/runs/detect/yolov8_exp1/weights/best.pt
+2. Ran validation on the test split and stored results in:  /content/Real-time-object-detection-with-YOLO/runs/detect/train/final_metrics.json
+3. Metrics collected:  
+- mAP@0.5  
+- mAP@0.5:0.95  
+- Precision  
+- Recall  
+- F1-Score  
+
+### Final Evaluation Metrics  
+
+| Metric           | Value  |  
+|------------------|--------|  
+| **mAP@0.5**      | 0.2938 |  
+| **mAP@0.5:0.95** | 0.2159 |  
+| **Precision**    | 0.8838 |  
+| **Recall**       | 0.1613 |  
+| **F1-Score**     | 0.1584 |  
+
+### Notes  
+- Results are stored in JSON format for reproducibility:  
+{
+   "mAP@0.5": 0.2938,
+   "mAP@0.5:0.95": 0.2159,
+   "Precision": 0.8838,
+   "Recall": 0.1613,
+   "F1-Score": 0.1584
+}
+- Metrics were generated using YOLOv8’s built-in validation pipeline.
+- Performance is limited by the small dataset size (135 train / 55 val / 19 test).
+
+
