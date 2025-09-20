@@ -1,0 +1,14 @@
+method: bayes   
+metric:
+  name: metrics/mAP50
+  goal: maximize
+parameters:
+  lr0:          
+    distribution: uniform
+    min: 0.001
+    max: 0.01
+  batch:       
+    values: [16, 32, 64]
+  imgsz:        
+    values: [416, 512, 640]
+
